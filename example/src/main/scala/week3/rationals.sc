@@ -1,3 +1,5 @@
+package week3
+
 object rationals {
   class Rational(x:Int, y:Int) {
     require(y != 0, "denominator must be nonzero")

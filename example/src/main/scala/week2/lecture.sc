@@ -15,7 +15,7 @@ object test {
 
   def averageDamp(f:Double => Double, x:Double) = (f(x)+x)/2
   
-  println(product(x=>x*x)(3,5))
+  product(x=>x*x)(3,5)
 }
 
 test
