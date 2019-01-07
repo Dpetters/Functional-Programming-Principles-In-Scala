@@ -21,6 +21,9 @@ class HuffmanSuite extends FunSuite {
     }
   }
 
+  test("times") {
+    assert(times(List('a', 'b', 'c', 'a', 'b', 'a')).sortBy((x)=>x._2) === List(('c', 1), ('b', 2), ('a', 3)))
+  }
 
   test("chars of a larger tree") {
     new TestTrees {
@@ -48,6 +51,12 @@ class HuffmanSuite extends FunSuite {
   test("decode and encode a very short text should be identity") {
     new TestTrees {
       assert(decode(t1, encode(t1)("ab".toList)) === "ab".toList)
+    }
+  }
+
+  test("decode and quickEncode a very short text should be identity") {
+    new TestTrees {
+      assert(decode(t1, quickEncode(t1)("ab".toList)) === "ab".toList)
     }
   }
 
